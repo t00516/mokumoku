@@ -33,7 +33,7 @@
             </div>
             <div class="field">
               <%= f.label :gender %><br />
-              <%= f.select :gender, options_for_select([['その他', 'other'], ['男性', 'man'], ['女性', 'woman']], selected: 'other') %>
+              <%= f.select :gender, User.genders_i18n.invert, {}, { class: 'form-control mr-1', id: 'Gender'} %>
             </div>
             <div class="mb-3">
               <div class="form-check">
